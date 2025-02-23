@@ -88,7 +88,7 @@ Tech stack: Typescript, next.js
 graph TD
     A[User] --> B(Next.js Application);
     B --> C{API Request};
-    C -- /api/candidates --> D(Go Backend API);
+    C -- /api/candidates?page=${page}&page_count=${page_count}&query=${query} --> D(Go Backend API);
     D --> E[In-Memory Candidate Data];
     E --> D;
     D --> F{Data Processing & Scoring};
